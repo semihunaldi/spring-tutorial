@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "93fc39fc-d944-4ecc-bd83-358230858637",
+		"name": "spring-tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer/findByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/findByEmail?email=john@doe.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"findByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "john@doe.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findCustomerByNameAndSurname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/name/john/surname/doe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"name",
+						"john",
+						"surname",
+						"doe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByPolicyNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/name/john/surname/doe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"name",
+						"john",
+						"surname",
+						"doe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findPolicyByCustom",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/policy/5D",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policy",
+						"5D"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"micheal\",\n\t\"surname\":\"jordan\",\n\t\"email\":\"micheal@jordan.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/saveCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"saveCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "savePolicy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"policyNumber\":\"5D\",\n\t\"surname\":\"jordan\",\n\t\"email\":\"micheal@jordan.com\",\n\t\"customer\": {\n    \t\"id\": 4,\n    \t\"name\": \"micheal\",\n    \t\"surname\": \"jordan\",\n    \t\"email\": \"micheal@jordan.com\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/policy/savePolicy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policy",
+						"savePolicy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
